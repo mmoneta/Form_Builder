@@ -6,12 +6,3 @@ export class IQuestion {
   level: number;
   parameter: string;
 }
-
-export class Question implements IQuestion {
-  Id = 0;
-  main_index = 0;
-  question = '';
-  answer = '';
-  level = 0;
-  parameter: string;
-}

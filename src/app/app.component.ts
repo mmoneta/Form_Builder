@@ -5,7 +5,6 @@ import * as json from '../assets/questions.json';
 import { QuestionComponent } from './question/question.component';
 import { MainQuestionComponent } from './main-question/main-question.component';
 import { QuestionService } from './services/question.service';
-import { Question, IQuestion } from './models/question';
 
 @Component({
   selector: 'app-root',
@@ -28,9 +27,6 @@ export class AppComponent implements OnInit {
   mainQuestionsComponentRef: any;
   questionsComponentRef: any;
 
-  _questions: Array<Question> = [];
-  private _service: QuestionService;
-
   @ViewChild('questionsContainer', { read: ViewContainerRef }) entry: ViewContainerRef;
 
   ngOnInit() {
@@ -50,7 +46,7 @@ export class AppComponent implements OnInit {
     this.mainQuestionsComponentRef.instance.onMainQuestionDestroy.subscribe(msg => this.onMainQuestionDestroy(msg));
   }
 
-  createQuestionComponent(main_index: any, sub_index: any, last_answer: any, last_type: any, question: any, type: any, level: number) {
+  createQuestionComponent(main_index: number, sub_index: number, last_answer: string, last_type: string, question: string, type: string, level: number) {
     const factory = this.resolver.resolveComponentFactory(QuestionComponent);
     this.questionsComponentRef = this.entry.createComponent(factory);
     this.questionComponents.push(this.questionsComponentRef);
