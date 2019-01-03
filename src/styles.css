@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body:not(option) {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  background-color: white;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  background-image: -moz-linear-gradient(0deg, #1e88e5 0%, #5e35b1 100%);
+  background-image: -webkit-linear-gradient(0deg, #1e88e5 0%, #5e35b1 100%);
+  background-image: -ms-linear-gradient(0deg, #1e88e5 0%, #5e35b1 100%);
+  background-image: linear-gradient(0deg, #1e88e5 0%, #5e35b1 100%);
+  min-height: 50px;
+  min-width: 100px;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover, button:focus {
+  color: #fff;
+  text-decoration: none;
+  background-image: -moz-linear-gradient(0deg, #1874c5 0%, #5124ad 100%);
+  background-image: -webkit-linear-gradient(0deg, #1874c5 0%, #5124ad 100%);
+  background-image: -ms-linear-gradient(0deg, #1874c5 0%, #5124ad 100%);
+  background-image: linear-gradient(0deg, #1e88e5 0%, #5e35b1 100%);
+}
+
+select, input {
+  border: 1px solid black;
+}
+
+.question {
+  padding: 20px !important;
+}
+
+.field {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.basic-margin {
+  margin-top: 10px;
+}
+
+.basic-padding {
+  padding: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  padding: 10px;
+}

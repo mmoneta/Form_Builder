@@ -1,0 +1,49 @@
+<div class="row basic-margin">
+  <div class="question col-md-{{ level }}"></div>
+  <div class="question col-md-{{ 10 - level }} field">
+     <div class="row centre">
+       <div class="col-md-3">
+         <p class="basic-padding">Condition</p>
+       </div>
+       <div class="col-md-6">
+         <p *ngIf="last_type != 'number'" class="field">Equals</p>
+         <select class="basic-padding full-width" *ngIf="last_type == 'number'" [(ngModel)]="parameter" (change)="change_parameter()">
+           <option>Greater than</option>
+           <option>Equal</option>
+           <option>Less than</option>
+         </select>
+       </div>
+       <div class="col-md-3">
+         <p class="field">{{ last_answer }}</p>
+       </div>
+     </div>
+     <div class="row basic-margin">
+       <div class="col-md-3">
+         <p class="basic-padding">Question</p>
+       </div>
+       <div class="col-md-9">
+         <p class="field">{{ view_question }}</p>
+       </div>
+     </div>
+     <div class="row basic-margin">
+       <div class="col-md-3">
+         <p class="basic-padding">Type</p>
+       </div>
+       <div class="col-md-9">
+         <input [(ngModel)]="question_answer" type="{{ type }}" *ngIf="type != 'select'" class="field full-width" (change)="change()" />
+         <select class="basic-padding full-width" *ngIf="type == 'select'" [(ngModel)]="question_answer" (change)="change()">
+           <option>Yes</option>
+           <option>No</option>
+         </select>
+       </div>
+     </div>
+     <div class="row basic-margin">
+       <div class="col-md-9 text-right">
+         <button (click)="vote();">Add Sub-Input</button>
+       </div>
+       <div class="col-md-3">
+         <button (click)="delete();">Delete</button>
+       </div>
+     </div>
+  </div>
+</div>

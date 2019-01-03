@@ -1,0 +1,11 @@
+h1 {
+  font-weight: bold;
+  font-style: italic
+}
+
+button {
+  margin: 10px 0px;
+  padding: 10px;
+  float: right;
+  clear: both;
+}

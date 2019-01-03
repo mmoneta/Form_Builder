@@ -1,0 +1,44 @@
+[  
+  {
+    "main_question": {  
+      "content": "Do you own a car?",
+      "type": "select"
+    },
+    "questions": [  
+       {
+         "level": 1,
+         "content": "What is your car model?",
+         "type": "text"
+       },
+       {  
+         "level": 2,
+         "content": "What color is your 'value'?",
+         "type": "text"
+       },
+       { 
+         "level": 2,
+         "content": "How many wheels on your 'value'?",
+         "type": "number"
+       },
+       {
+         "level": 3,
+         "content": "Is your model road legal?",
+         "type": "select"
+       }
+     ]
+  },
+  {  
+    "main_question": {  
+      "content": "What year your building built?",
+      "type": "number"
+    },
+    "questions": []
+  },
+  {  
+    "main_question": {  
+      "content": "What is your company name?",
+      "type": "text"
+    },
+    "questions":[]
+  }
+]

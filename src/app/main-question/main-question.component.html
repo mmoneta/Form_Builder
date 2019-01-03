@@ -1,0 +1,33 @@
+<div class="row basic-margin">
+  <div class="col-md-10 question field">
+     <div class="row centre">
+       <div class="col-md-3">
+         <p class="text">Question</p>
+       </div>
+       <div class="col-md-9">
+         <p class="field">{{ main_question_content }}</p>
+       </div>
+     </div>
+     <div class="row basic-margin">
+       <div class="col-md-3">
+         <p class="basic-padding">Type</p>
+       </div>
+       <div class="col-md-9">
+         <select class="basic-padding full-width" *ngIf="main_question_type == 'select'" [(ngModel)]="mainQuestionAnswer" (change)="change()">
+           <option>Yes</option>
+           <option>No</option>
+         </select>
+         <input type="number" class="basic-padding full-width" *ngIf="main_question_type == 'number'" [(ngModel)]="mainQuestionAnswer" (change)="change()" />
+         <input type="text" class="basic-padding full-width" *ngIf="main_question_type == 'text'" [(ngModel)]="mainQuestionAnswer" (change)="change()" />
+       </div>
+     </div>
+     <div class="row basic-margin">
+       <div class="col-md-9 text-right">
+         <button (click)="vote();">Add Sub-Input</button>
+       </div>
+       <div class="col-md-3">
+         <button (click)="delete();">Delete</button>
+       </div>
+     </div>
+  </div>
+</div>
